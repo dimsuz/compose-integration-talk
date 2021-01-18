@@ -28,9 +28,23 @@
                     <div style="flex: 1 50%; margin: 0">
                       <img src="images/compose.png" height="400">
                     </div>
-                    <p style="flex: 1 50%; font-size: 0.8em; margin: 0" class="fragment">View</p>
+                    <p style="flex: 1 50%; font-size: 0.8em; margin: 0" class="fragment">android.View</p>
                     <p style="flex: 1 50%; font-size: 0.8em; margin: 0" class="fragment">Compose</p>
                   </div>
+                </section>
+                <section>
+                  <div class="r-stack">
+                    <h4 class="fragment fade-in-then-out">Что за всем этим?</h4>
+                    <p class="fragment fade-up fade-in-then-out">Модификации влиты в dev-ветку</p>
+                    <p class="fragment fade-up fade-in-then-out">QA + Prod версии никак не затягивают и не упоминают <span class="hljs-number">Compose</span></p>
+                    <p class="fragment fade-up fade-in-then-out">По-прежнему используется <span class="hljs-number">Conductor</span><br/>(для backstack + lifecycle)</p>
+                    <p class="fragment fade-up fade-in-then-out">Поддержка <span class="hljs-number">Compose</span> включается<br/><span class="hljs-number">глобальным флагом</span> + <span class="hljs-number">gradle sync</span> + <span class="hljs-number">clean build</span></p>
+                    <p class="fragment fade-up fade-in-then-out">Можно по желанию писать view для презентера на <span class="hljs-number">Compose</span> and/or <span class="hljs-number">android.View</span><br/><br/>Презентер <span class="hljs-symbol"><strong>без изменений!</strong></span></p>
+                    <p class="fragment fade-up">На <span class="hljs-number">Compose</span> написан <span class="hljs-number">UI-Kit</span> и основные виджеты-компоненты<br/><span style="opacity: 0.5; font-size:0.7em;">(конечно, в дополнение основному xml-based)</span></p>
+                  </div>
+                </section>
+                <section>
+                  <h4>Hello</h4>
                 </section>
             </div>
         </div>
@@ -49,6 +63,12 @@
                 // Learn about plugins: https://revealjs.com/plugins/
                 plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
             });
+          Reveal.on('slidechanged', event => {
+              console.log()
+              if (event.indexh === 2) {
+                  Reveal.nextFragment();
+              }
+          })
         </script>
     </body>
 </html>
