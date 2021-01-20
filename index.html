@@ -18,6 +18,7 @@
             <div class="slides">
                 <section>
                   <h4>Compose + Android View = <span style="font-size: 2em;">👯‍♀️</span></h4>
+                  <img src="images/jetpack-xkcd.png" height="400" style="margin-top: 2em;"/>
                 </section>
                 <section>
                   <h4>В чём разница?</h4>
@@ -44,7 +45,64 @@
                   </div>
                 </section>
                 <section>
-                  <h4>Hello</h4>
+                  <h4>Какие изменения в проекте?</h4>
+                </section>
+                <section>
+                  <h4>Gradle 6.8</h4>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">buildSrc/build.gradle</h4>
+                  <h4 style="text-transform: none">buildSrc/src/.../Deps.kt</h4>
+                  <img src="images/buildsrc-gradle.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">buildSrc/.../BaseExtensionConfiguration.kt</h4>
+                  <img src="images/buildsrc-base-ext.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">settings.gradle</h4>
+                  <img src="images/settings-gradle.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">lib/core/ui/mvi-compose/build.gradle</h4>
+                  <img src="images/mvi-compose-deps.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">core/ui/build.gradle</h4>
+                  <img src="images/mvi-compose-ui-core.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">Добавлен один базовый класс</h4>
+                  <h3 style="text-transform: none"><span class="hljs-number">ComposeController</span></h3>
+                </section>
+                <section>
+                  <h4>Как он используется?</h4>
+                  <h4 style="text-transform: none; opacity: 0.5;">my-feature/src/.../MyController.kt</h4>
+                  <img src="images/compose-controller.png" height="450"/>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">my-feature/src/.../MyScreenKey.kt</h4>
+                  <img src="images/compose-key.png"/>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">lib/.../mvi-compose/src/.../Construction.kt</h4>
+                  <img src="images/create-controller.png"/>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">Как убрать compose-based Controller из feature-модуля?</h4>
+                  <p class="fragment">Добавить директорию в sourceSet!<br/><span style="opacity: 0.5">(основываясь на USE_COMPOSE)</span></p>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">buildSrc/.../LibraryExtension.kt</h4>
+                  <img src="images/compose-source-set-config.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">Вуаля!</h4>
+                  <img src="images/source-set-ide.png"</img>
+                </section>
+                <section>
+                  <h4 style="text-transform: none">Финиш</h4>
+                  <p><span style="font-size: 2em;">🏁</span></p>
                 </section>
             </div>
         </div>
